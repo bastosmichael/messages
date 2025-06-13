@@ -1,93 +1,104 @@
-# Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher (2023)
+# NextMessenger
 
-![Copy of Copy of Fullstack Twitter Clone (1)](https://user-images.githubusercontent.com/23248726/236631198-90414da5-ee43-46a9-8898-70b003bcd83d.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+NextMessenger is a real-time chat application built with Next.js 13, Prisma, and Pusher. It provides group and direct messaging with social logins and file uploads out of the box.
 
-This is a repository for a Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher.
+## Table of Contents
+- [Features](#features)
+- [Demo](#demo)
+- [Setup](#setup)
+  - [Simple Mode Setup](#simple-mode-setup)
+  - [Advanced Mode Setup](#advanced-mode-setup)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [FAQ](#faq)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
-[VIDEO TUTORIAL](https://www.youtube.com/watch?v=PGPGcKBpAk8)
+## Features
+- Real-time chat powered by Pusher
+- Social and credential authentication via NextAuth
+- Group conversations and one-on-one messaging
+- File and image uploads through Cloudinary
+- Read receipts and online status indicators
+- Responsive UI built with Tailwind CSS
+- TypeScript and Prisma for type-safe data handling
+- Client-side form validation with react-hook-form
+- Toast notifications for errors and status updates
 
-Master the art of building a real-time Messenger clone using the latest web development technologies. In this comprehensive tutorial, we'll walk you through the process of creating a fully-functional and visually stunning chat application that rivals the best in the industry.
+## Demo
+A short demo is available on [YouTube](https://www.youtube.com/watch?v=PGPGcKBpAk8).
 
-Key Features:
+## Setup
+Below are quick steps to get the project running. Environment variables are required for database access, authentication, and Pusher.
 
-- Real-time messaging using Pusher
-- Message notifications and alerts
-- Tailwind design for sleek UI
-- Tailwind animations and transition effects
-- Full responsiveness for all devices
-- Credential authentication with NextAuth
-- Google authentication integration
-- Github authentication integration
-- File and image upload using Cloudinary CDN
-- Client form validation and handling using react-hook-form
-- Server error handling with react-toast
-- Message read receipts
-- Online/offline user status
-- Group chats and one-on-one messaging
-- Message attachments and file sharing
-- User profile customization and settings
-- How to write POST, GET, and DELETE routes in route handlers (app/api)
-- How to fetch data in server React components by directly accessing the database (WITHOUT API! like Magic!)
-- Handling relations between Server and Child components in a real-time environment
-- Creating and managing chat rooms and channels
+### Simple Mode Setup
+1. **Clone the Repository**
+   ```bash
+   git clone <repo-url>
+   cd messages
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Configure Environment**
+   ```bash
+   cp .env .env.local
+   ```
+   Required variables:
+   * `APP_MODE=simple`
+   * `DATABASE_URL=`
+   * `NEXTAUTH_SECRET=`
+   * `NEXT_PUBLIC_PUSHER_APP_KEY=`
+   * `PUSHER_APP_ID=`
+   * `PUSHER_SECRET=`
+   * `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=`
+   * `GITHUB_ID=`
+   * `GITHUB_SECRET=`
+   * `GOOGLE_CLIENT_ID=`
+   * `GOOGLE_CLIENT_SECRET=`
+4. **Run the App**
+   ```bash
+   npm run dev
+   ```
+   To run tests, use `npm test`. Lint the project with `npm run lint`.
 
-Whether you're an experienced developer looking to expand your skillset or a beginner eager to learn the latest web development technologies, this tutorial has something for everyone. Join us on this exciting journey and take your web development skills to new heights!
+### Advanced Mode Setup
+Advanced mode may require a production database, custom Pusher configuration, or additional plugins. Set `APP_MODE=advanced` in `.env.local` and provide any extra secrets such as a Cloudinary API key.
 
+## Usage
+1. Sign up or log in with GitHub, Google, or email credentials.
+2. Create a conversation and add participants or start a direct chat.
+3. Send messages or upload files. Uploaded images will appear inline.
+4. Read receipts and online indicators update automatically in real time.
 
-### Prerequisites
+## Deployment
+Deployments work great on Vercel.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project)
+1. Push your fork to GitHub.
+2. In Vercel, import the project and set the environment variables from `.env.local`.
+3. Trigger a deployment.
 
-**Node version 14.x**
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first. Be sure to run `npm install` and `npm run lint` before submitting.
 
-### Cloning the repository
+## FAQ
+1. **Is there a test suite?** Not yet. Lint the project with `npm run lint`.
+2. **What Node version is required?** Node 18 LTS is recommended.
+3. **How do I reset the database?** Update `DATABASE_URL` in `.env.local` and run `npx prisma db push`.
 
-```shell
-git clone https://github.com/AntonioErdeljac/next13-messenger.git
-```
+## License
+This project is licensed under the MIT license.
 
-### Install packages
+## Acknowledgements
+- [Next.js](https://nextjs.org/)
+- [Prisma](https://www.prisma.io/)
+- [Pusher](https://pusher.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-```shell
-npm i
-```
-
-### Setup .env file
-
-
-```js
-DATABASE_URL=
-NEXTAUTH_SECRET=
-
-NEXT_PUBLIC_PUSHER_APP_KEY=
-PUSHER_APP_ID=
-PUSHER_SECRET=
-
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
-
-GITHUB_ID=
-GITHUB_SECRET=
-
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-```
-
-### Setup Prisma
-
-```shell
-npx prisma db push
-
-```
-
-### Start the app
-
-```shell
-npm run dev
-```
-
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+## Contact
+For issues or feature requests, please open an issue on GitHub.
