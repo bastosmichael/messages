@@ -1,8 +1,8 @@
-# NextMessenger
+# Messages
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-NextMessenger is a real-time chat application built with Next.js 13, Prisma, and Pusher. It provides group and direct messaging with social logins and file uploads out of the box.
+Messages is a real-time chat application built with Next.js 13, Prisma, and Pusher. It provides group and direct messaging with social logins and file uploads out of the box.
 
 ## Table of Contents
 - [Features](#features)
