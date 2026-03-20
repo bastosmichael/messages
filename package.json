@@ -30,7 +30,7 @@
     "next-superjson-plugin": "^0.5.7",
     "postcss": "8.5.8",
     "pusher": "^5.3.3",
-    "pusher-js": "^8.4.2",
+    "pusher-js": "^8.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.71.2",
